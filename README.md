@@ -9,12 +9,12 @@ To use WorkWise, simply enter your starting time in the format `HH:MM` when prom
 ```
 Welcome to WorkWise v1.3!
 
-Enter your starting time (HH:MM): 01:03
+Enter your starting time (HH:MM): 07:15
 
 Here are your options:
-1. Check out at 07:03: Lunch break: 00m, time balance change: -1h 48m
-2. Check out at 09:21: Lunch break: 30m, time balance change: 00h 00m
-3. Check out at 10:48: Lunch break: 45m, time balance change: 01h 12m
+1. Check out at 13:15: Lunch break: 00m, time balance change: -1h 48m
+2. Check out at 15:33: Lunch break: 30m, time balance change: 00h 00m
+3. Check out at 17:00: Lunch break: 45m, time balance change: 01h 12m
 
 Press any key to exit...
 ```
