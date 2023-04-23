@@ -37,13 +37,13 @@ LUNCH_BREAKS = (
 
 def calculate_time(hours: int, minutes: int) -> None:
     default_time = datetime.now().replace(hour=hours, minute=minutes, second=0, microsecond=0)
-    print("\nHere are some alternatives:")
+    print("\nHere are your options:")
     for i, (lunch_break, delta) in enumerate(LUNCH_BREAKS):
         target_time = default_time + delta + lunch_break
         balance_change = delta - REQUIRED_TIME
         hours, minutes = timedelta_hm(balance_change)
 
-        print(colorize(hours, f"{i+1}. Checkout at {target_time.strftime('%H:%M')}: "
+        print(colorize(hours, f"{i+1}. Check out at {target_time.strftime('%H:%M')}: "
                               f"Lunch break: {lunch_break.total_seconds() // 60:02.0f}m, "
                               f"time balance change: {hm_formatter(hours, minutes)}"))
     print()
@@ -68,7 +68,7 @@ def timedelta_hm(td: timedelta) -> (int, int):
 
 
 def hm_formatter(hours, minutes) -> str:
-    return f"{hours:02d}:{minutes:02d}"
+    return f"{hours:02d}h {minutes:02d}m"
 
 
 def colorize(hours: int, out_str: str) -> str:
@@ -88,7 +88,7 @@ def get_input_time() -> tuple:
 
     while True:
         try:
-            time_str = input("Enter the time (HH:MM): ")
+            time_str = input("Enter your starting time (HH:MM): ")
             hours, minutes = map(int, time_str.split(':'))
             if not (0 <= hours <= 23):
                 print("Invalid hour value! Hour value should be between 0 and 23. Try again.\n")
