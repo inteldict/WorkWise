@@ -43,7 +43,7 @@ def calculate_time(hours: int, minutes: int) -> None:
         balance_change = delta - REQUIRED_TIME
         hours, minutes = timedelta_hm(balance_change)
 
-        print(colorize(hours, f"{i}. Checkout at {target_time.strftime('%H:%M')}: "
+        print(colorize(hours, f"{i+1}. Checkout at {target_time.strftime('%H:%M')}: "
                               f"Lunch break: {lunch_break.total_seconds() // 60:02.0f}m, "
                               f"time balance change: {hm_formatter(hours, minutes)}"))
     print()
