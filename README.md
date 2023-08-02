@@ -38,7 +38,7 @@ WorkWise requires the following:
 To install WorkWise, clone the repository and navigate to the project directory:
 
 ```
-git clone https://github.com/your-username/workwise.git
+git clone https://github.com/inteldict/WorkWise.git
 cd workwise
 ```
 
